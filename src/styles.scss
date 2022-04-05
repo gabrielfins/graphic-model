@@ -1,0 +1,43 @@
+:root {
+  --blue: #4C8CEB;
+  --blue-variant-dark: #3273d4;
+  --blue-variant-darker: #185fca;
+  --light-blue: #D3E5FF;
+  --red: #F04747;
+  --light-red: #FFD1D1;
+  --off-white: #FBFAFA;
+  --dark-off-white: #F0F0F0;
+  --dark-grey: #3E3E3E;
+  --grey: #BCBCBC;
+  --light-grey: #E4E4E4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+input, button {
+  font: inherit;
+}
+
+#root {
+  display: grid;
+  min-height: 100vh;
+}

@@ -1,0 +1,23 @@
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  width: 100%;
+  height: 4rem;
+  padding-right: 1.6rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--blue);
+  color: #FFFFFF;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover, &:focus-visible {
+    background-color: var(--blue-variant-dark);
+  }
+
+  &:active {
+    background-color: var(--blue-variant-darker);
+  }
+}
