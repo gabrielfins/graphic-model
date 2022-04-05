@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import styles from './styles.module.scss';
+import styles from './divider.module.scss';
 
 interface DividerProps extends HTMLAttributes<HTMLDivElement> {
   direction: 'vertical' | 'horizontal';

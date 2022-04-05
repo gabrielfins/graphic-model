@@ -1,12 +1,12 @@
 import { ButtonHTMLAttributes } from 'react';
-import styles from './styles.module.scss';
+import styles from './button.module.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outlined' | 'text';
+  variant?: 'primary' | 'secondary';
 }
 
 export default function Button({variant='primary', ...props}: ButtonProps) {
   return (
-    <button className={styles[variant]} {...props} />
+    <button className={styles.primary} {...props} />
   );
 }

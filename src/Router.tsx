@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomeLayout from 'layouts/home-layout';
-import Home from 'pages/home/Home';
-import Projects from 'pages/home/Projects';
-import Trash from 'pages/home/Trash';
-import Settings from 'pages/home/Settings';
-import About from 'pages/home/About';
+import HomeLayout from 'layouts/home-layout/home-layout';
+import Home from 'pages/Home/home';
+import Projects from 'pages/Projects/projects';
+import Trash from 'pages/Trash/trash';
+import Settings from 'pages/Settings/settings';
+import About from 'pages/About/about';
 
 export default function Router() {
   return (

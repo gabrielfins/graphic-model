@@ -1,5 +1,5 @@
 import { NavLink, NavLinkProps } from 'react-router-dom';
-import styles from './styles.module.scss';
+import styles from './nav-button.module.scss';
 
 export default function NavButton(props: NavLinkProps) {
   return (
