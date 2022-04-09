@@ -1,0 +1,28 @@
+.menuStrip {
+  position: fixed;
+  top: 0;
+  left: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 10rem - 30rem);
+  height: 6rem;
+  padding: 1rem 3rem;
+  border-bottom: .1rem solid var(--light-grey);
+  background-color: var(--off-white);
+
+  & p {
+    font-size: 1.4rem;
+    color: var(--medium-dark-grey);
+  }
+}
+
+.alignmentContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.alignment {
+  display: flex;
+}

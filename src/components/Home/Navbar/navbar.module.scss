@@ -1,33 +1,16 @@
 $navbar-size: 6.4rem;
 $sidebar-size: 27rem;
 
-main {
-  margin-top: $navbar-size;
-  margin-left: $sidebar-size;
-}
-
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   width: $sidebar-size;
   height: 100%;
+  border-right: .1rem solid var(--light-grey);
   background-color: var(--off-white);
-}
-
-.wrapper {
-  height: 100%;
-  display: flex;
-  flex: 1;
-
-  &.vertical {
-    flex-direction: column;
-  }
-
-  &.nav {
-    padding: 1rem 5rem;
-  }
 }
 
 .logoContainer {
@@ -43,21 +26,61 @@ main {
   padding: 1rem;
 }
 
+.navbarButton {
+  width: 100%;
+}
+
 .navLinks {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.navLink {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--dark-grey);
+  text-decoration: none;
+
+  &:hover, &:focus-visible {
+    background-color: #e4e4e4;
+  }
+
+  &:active {
+    background-color: #d8d8d8;
+  }
+
+  &:global.active {
+    font-weight: 600;
+    color: var(--blue);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: .5rem;
+      border-radius: 0 .25rem .25rem 0;
+      background-color: var(--blue);
+    }
+  }
 }
 
 .navbar {
   position: fixed;
   top: 0;
   left: $sidebar-size;
-  width: calc(100% - $sidebar-size);
   display: flex;
-  flex-direction: column;
+  width: calc(100% - $sidebar-size);
   height: $navbar-size;
+  padding: 1rem 5rem;
+  border-bottom: .1rem solid var(--light-grey);
   background-color: var(--off-white);
 }
 

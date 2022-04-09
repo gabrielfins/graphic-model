@@ -1,0 +1,85 @@
+{
+  "title": "untitled",
+  "type": "erd_conceptual",
+  "content": [
+    {
+      "id": 0,
+      "object": "entity",
+      "name": "cliente",
+      "type": 0,
+      "size": [80, 60],
+      "position": [0, 0],
+      "attributes": [
+        {
+          "id": 0,
+          "name": "nome",
+          "type": 0,
+          "size": [20, 20],
+          "position": [120, 0],
+          "isKey": false,
+          "isOptional": false,
+          "dbType": "varchar(50)",
+          "comments": "..."
+        },
+        {
+          "id": 1,
+          "type": 0,
+          "name": "cpf",
+          "size": [20, 20],
+          "position": [120, 0],
+          "isKey": true,
+          "isOptional": false,
+          "dbType": "varchar(11)",
+          "comments": "..."
+        }
+      ],
+      "comments": "..."
+    },
+    {
+      "id": 1,
+      "object": "entity",
+      "name": "funcionario",
+      "type": 0,
+      "size": [80, 60],
+      "position": [100, 150],
+      "attributes": [
+        {
+          "id": 0,
+          "name": "nome",
+          "type": 0,
+          "size": [20, 20],
+          "position": [120, 0],
+          "isKey": false,
+          "isOptional": false,
+          "dbType": "varchar(50)",
+          "comments": "..."
+        },
+        {
+          "id": 1,
+          "type": 0,
+          "name": "cpf",
+          "size": [20, 20],
+          "position": [120, 0],
+          "isKey": true,
+          "isOptional": false,
+          "dbType": "varchar(11)",
+          "comments": "..."
+        }
+      ],
+      "comments": "..."
+    },
+    {
+      "id": 2,
+      "object": "relationship",
+      "name": "contrata",
+      "type": 0,
+      "size": [80, 60],
+      "position": [200, 200],
+      "entities": [0, 1],
+      "hasArrow": false,
+      "arrowDirection": null,
+      "arrowPosition": null,
+      "comments": "..."
+    }
+  ]
+}

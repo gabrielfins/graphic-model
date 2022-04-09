@@ -1,0 +1,46 @@
+.properties {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--off-white);
+  border-left: .1rem solid var(--light-grey);
+}
+
+.tabSelectors {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  height: 6rem;
+  padding: 1.4rem;
+  border-bottom: .1rem solid var(--light-grey);
+}
+
+.tabButton {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: transparent;
+  color: var(--medium-dark-grey);
+  cursor: pointer;
+
+  &:hover, &:focus-visible {
+    background-color: var(--light-grey);
+  }
+
+  &:active {
+    background-color: var(--medium-light-grey);
+  }
+
+  &:global.selected {
+    background-color: var(--medium-darker-grey);
+    color: #FFFFFF;
+    cursor: default;
+  }
+}

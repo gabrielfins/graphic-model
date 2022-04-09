@@ -1,14 +1,28 @@
+$blue: #4C8CEB;
+$light-blue: #D3E5FF;
+$red: #F04747;
+$light-red: #FFD1D1;
+
 :root {
-  --blue: #4C8CEB;
-  --blue-variant-dark: #3273d4;
-  --blue-variant-darker: #185fca;
-  --light-blue: #D3E5FF;
-  --red: #F04747;
-  --light-red: #FFD1D1;
+  --blue: #{$blue};
+  --blue-variant-dark: #{scale-color($blue, $lightness: -15%)};
+  --blue-variant-darker: #{scale-color($blue, $lightness: -30%)};
+  --light-blue: #{$light-blue};
+  --light-blue-variant-dark: #{scale-color($light-blue, $lightness: -6%)};
+  --light-blue-variant-darker: #{scale-color($light-blue, $lightness: -12%)};
+  --red: #{$red};
+  --red-variant-dark: #{scale-color($red, $lightness: -15%)};
+  --red-variant-darker: #{scale-color($red, $lightness: -30%)};
+  --light-red: #{$light-red};
+  --light-red-variant-dark: #{scale-color($light-red, $lightness: -6%)};;
+  --light-red-variant-darker: #{scale-color($light-red, $lightness: -12%)};;
   --off-white: #FBFAFA;
   --dark-off-white: #F0F0F0;
   --dark-grey: #3E3E3E;
+  --medium-darker-grey: #474747;
+  --medium-dark-grey: #8D8D8D;
   --grey: #BCBCBC;
+  --medium-light-grey: #cacaca;
   --light-grey: #E4E4E4;
 }
 

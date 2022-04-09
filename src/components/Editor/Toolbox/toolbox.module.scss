@@ -1,0 +1,13 @@
+.toolbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: min-content;
+  width: 10rem;
+  height: 100%;
+  padding: 1rem;
+  border-right: .1rem solid var(--light-grey);
+  background-color: var(--off-white);
+}
