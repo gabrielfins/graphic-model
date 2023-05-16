@@ -1,8 +1,8 @@
 import { ButtonHTMLAttributes } from 'react';
-import styles from './editor-button.module.scss'
+import styles from './editor-button.module.scss';
 
-export default function ToolboxButton({className, ...props}: ButtonHTMLAttributes<HTMLButtonElement>) {
+export default function EditorButton({className, ...props}: ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button className={`${styles.toolboxButton} ${className ? className : ''}`} {...props} />
+    <button className={`${styles.editorButton} ${className ? className : ''}`} {...props} />
   );
 }

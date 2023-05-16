@@ -11,3 +11,11 @@
   border-right: .1rem solid var(--light-grey);
   background-color: var(--off-white);
 }
+
+.selected {
+  background-color: var(--darker-off-white);
+
+  &:hover, &:active {
+    background-color: var(--darker-off-white);
+  }
+}
