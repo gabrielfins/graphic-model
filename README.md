@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Graphic Model
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A desktop app for drawing **database models** — entity-relationship diagrams made of entities and their attributes. Built with **React, TypeScript and Electron**.
 
-## Available Scripts
+> **Status:** early stage. The home screens, editor layout (menu strip, toolbox and properties panel) and the diagram data format are in place; the drawing canvas is still a stub.
 
-In the project directory, you can run:
+## Diagram format
 
-### `npm start`
+Diagrams are described as JSON. A sample lives in [`src/assets/graphic.json`](src/assets/graphic.json):
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```json
+{
+  "title": "untitled",
+  "type": "erd_conceptual",
+  "content": [
+    { "id": 0, "object": "entity", "name": "cliente", "size": [80, 60], "position": [0, 0], "attributes": [ ... ] }
+  ]
+}
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech stack
 
-### `npm test`
+- React 18 + TypeScript (Create React App)
+- Electron 18 (desktop shell)
+- React Router, React Icons
+- Sass / CSS Modules
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting started
 
-### `npm run build`
+Requirements: Node.js and npm.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run in the browser:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run react-start      # http://localhost:3000
+```
 
-### `npm run eject`
+Run as a desktop app (starts the React dev server, then opens Electron):
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm run electron-start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Production build of the React app:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project structure
 
-## Learn More
+```
+electron/                    # Electron main process and dev launcher
+src/
+├── components/              # Common, Editor and Home components
+├── layouts/                 # HomeLayout and EditorLayout
+├── pages/                   # Home (Home, Projects, Settings, About) and Editor (Canvas)
+└── assets/graphic.json      # Sample diagram
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Released under the [MIT License](LICENSE.md).
